@@ -1,0 +1,16 @@
+{
+    "name": "xdc3/php",
+    "description": "By This Library We can Access the XRC20 and XRC721 Methods ",
+    "type": "library",
+    "authors": [{
+        "name": "Foundation",
+        "email": "XFLW@xinfin.org"
+    }],
+    "minimum-stability": "dev",
+    "require": {
+        "xdc3base/php": "1.1.0",
+        "sop/asn1": "^3.3",
+        "sop/crypto-encoding": "^0.2.0",
+        "sop/crypto-types": "^0.2.1"
+    }
+}
