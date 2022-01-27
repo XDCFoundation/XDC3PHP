@@ -1,6 +1,6 @@
 # XDC3PHP
 
-XDC3_PHP API with support for smart contracts, XRC20 and XRC721.
+XDC3_PHP SDK with support for smart contracts, XRC20 and XRC721.
 
 ```
     XRC20 Token: Read methods                           XRC721 Token: Read methods
@@ -31,7 +31,7 @@ XDC3_PHP API with support for smart contracts, XRC20 and XRC721.
 ```
 User need to follow the following steps for using the XDCPHP Library
 Step1 :- Create a folder (eg : sdk)
-Step2 :- Inside the folder open the command prompt and type composer require xdc3/php
+Step2 :- Inside the folder open the command prompt and type ** composer require xdc3/php**
 Step3 :- Create a file (eg : index.php)
 Step4 :- After creating user need to add the path , import the classes and create the object
 Step5 :- (optional) If user wants to change the URL of (Apothem testnet Network)  Goto vendor -> XDC3 folder -> PHP folder -> .env file
@@ -89,9 +89,19 @@ In PHPS library inside the vendor folder -> xdc3 -> php  we can find the all cal
 
 If user wants to change the URL  Goto vendor -> XDC3 folder -> PHP folder -> .env file   .
 
-ex :-//path configurationinclude "vendor/xdc3/php/library.php";//Import classes of XDC20 use XRC721\SDK\XRC20SDK;
+ex :-//path configuration
+include "vendor/xdc3/php/library.php";
 
-//Creating a Objects to call the functions of XRC20 and Create a wallet for the User$obj1 = new XRC20SDK();$obj3 = new createXDCWallet();
+//Import classes of XRC20 and XRC721
+use XRC721\SDK\XRC20SDK;
+use XRC721\SDK\XRC721;
+
+//Creating a Objects to call the functions of XRC20 and XRC721 
+$obj1 = new XRC20SDK();
+$obj2-> new XRC721();
+
+//Create a wallet for the User
+$obj3 = new createXDCWallet();
 
 ## Example
 ```php
