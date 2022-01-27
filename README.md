@@ -27,11 +27,11 @@ XDC3_PHP SDK with support for smart contracts, XRC20 and XRC721.
              
 ```
                                                           
-#  Usage
+##  Usage
 ```
 User need to follow the following steps for using the XDCPHP Library
 Step1 :- Create a folder (eg : sdk)
-Step2 :- Inside the folder open the command prompt and type ** composer require xdc3/php**
+Step2 :- Inside the folder open the command prompt and type 'composer require xdc3/php'
 Step3 :- Create a file (eg : index.php)
 Step4 :- After creating user need to add the path , import the classes and create the object
 Step5 :- (optional) If user wants to change the URL of (Apothem testnet Network)  Goto vendor -> XDC3 folder -> PHP folder -> .env file
