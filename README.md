@@ -3,26 +3,25 @@
 XDC3_PHP API with support for smart contracts, XRC20 and XRC721.
 
 ```
-## XRC20 Token: Read methods                XRC721 Token: Read methods
+    XRC20 Token: Read methods                           XRC721 Token: Read methods
 
-                name()                          name()
-                symbol()                        symbol()
-                decimal()                       totalSupply()
-                totalSupply()                   balanceOf(owner address)
-                balanceOf(account)              ownerOf(tokenId)
-                allowance(owner, spender)       tokenURI(tokenId)
-                                                tokenByIndex(index)
-                                                tokenOfOwnerByIndex(ownerAddress,index)
-                                                supportInterface(interfaceId)
-                                                getApproved(tokenId)
-                                                isApprovedForAll(ownerAddress, operatorAddress) 
+        name()                                               name()
+        symbol()                                             symbol()
+        decimal()                                            totalSupply()
+        totalSupply()                                        balanceOf(owner address)
+        balanceOf(account)                                   ownerOf(tokenId)
+        allowance(owner, spender)                            tokenURI(tokenId)
+                                                             tokenByIndex(index)
+                                                             tokenOfOwnerByIndex(ownerAddress,index)
+                                                             supportInterface(interfaceId)
+                                                             getApproved(tokenId)
+                                                             isApprovedForAll(ownerAddress, operatorAddress) 
 
-## XRC20 Token: Write methods                           ##  XRC721 Token: Write methods
+    XRC20 Token: Write methods                           XRC721 Token: Write methods
 
-        approve(receiverAddress , amount)                 setApprovalForAll(operatorAddress, booleanValue)
-        transfer(recipient, amount)                       approve(receiverAddress , tokenId)
-        transferFrom(sender, recipient, amount)           transferFrom(recipient, amount)
-        increaseAllowance(spender, addedValue)            safeTransferFrom(spender, amount)
+        approve(receiverAddress , amount)                    setApprovalForAll(operatorAddress, booleanValue)
+        transfer(recipient, amount)                          approve(receiverAddress , tokenId)        transferFrom(sender, recipient, amount)              transferFrom(recipient, amount)
+        increaseAllowance(spender, addedValue)               safeTransferFrom(spender, amount)
         decreaseAllowance(spender, subtractedValue)                
 ```
                                                           
