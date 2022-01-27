@@ -107,46 +107,23 @@ use XRC20\SDK\XRC20SDK;
 //Creating a Objects to call the functions of XRC20 and Create a wallet for the User
 $obj1 = new XRC20SDK();
 
-# Name func :-
-$obj1->getName($contractAddress);
-var_dump($obj1);
-#Symbol func :- 
-$obj1->getSymbol($contractAddress);
-var_dump($obj1);
-Decimal func :-
-$obj1->getDecimal($contractAddress);
-var_dump($obj1);
-TotalSupply func :-
-$obj1->getTotalSupply($contractAddress);
-var_dump($obj1);
-BalanceOf func :-
-$obj1->getBalanceOf($contractAddress,$ownerAddress);
-var_dump($obj1);
-Allowance func:-
-$obj1->getAllowance($contractAddress,$ownerAddress,$spenderAddress);
-var_dump($obj1);
+Name func :-
+var_dump($obj1->getName($contractAddress));
+
 GetApprove func:-
-$obj1->getApprove($contractAddress,$ownerAddress,$ownerPrivateKey,$spenderAddress,$tokenAmount);;
-var_dump($obj1);
-IncreaseAllowance func :-
- $obj1->increaseAllowance($contractAddress,$ownerAddress,$ownerPrivateKey,$spenderAddress,$tokenAmount);
-var_dump($obj1);
-DecreaseAllowance func :- 
-$obj1->decreaseAllowance($contractAddress,$ownerAddress,$ownerPrivateKey,$spenderAddress,$tokenAmount);
-var_dump($obj1);
+var_dump($obj1->getApprove($contractAddress,$ownerAddress,$ownerPrivateKey,$spenderAddress,$tokenAmount));
+
 TransferFrom func :-
-$obj1->transferFrom($contractAddress,$ownerAddress,$spenderAddress,$spenderPrivateKey,$recieverAddress,$tokenAmount);
-var_dump($obj1);
-TransferToken func :-
-$obj1->transferToken($contractAddress,$senderAddress,$senderPrivateKey,$recieverAddress,$tokenAmount);
-var_dump($obj1);
+var_dump($obj1->transferFrom($contractAddress,$ownerAddress,$spenderAddress,$spenderPrivateKey,$recieverAddress,$tokenAmount));
+
 TransferXdc func :-
 $obj1->transferXdc($contractAddress,$senderAddress,$senderPrivateKey,$recieverAddress,$xdcAmount);
 var_dump($obj1);
 
 CreateWallet func:-
+
 $obj3 = new createXDCWallet();
-$obj3->createWallet();?>
+$obj3->createWallet();
 ```
 
 ## Example for XRC721
@@ -164,51 +141,13 @@ use XRC721\SDK\XRC721;
 $obj2-> new XRC721();
 
 #Name func :-
-$obj2->getName($contractAddress);
-var_dump($obj2);
+var_dump($obj2->getName($contractAddress));
+
 #Symbol func :-
-$obj2->getSymbol($contractAddress);
-var_dump($obj2);
-#TotalSupply func :-4
-$obj2->getTotalSupply($contractAddress);
-var_dump($obj2);
-#BalanceOf func :-
-$obj2->getBalanceOf($contractAddress,$ownerAddress);
-var_dump($obj2);
-#SupportsInterface func :-
-var_dump($obj2);
-$obj2->getSupportInterface($contractAddress,$interfaceId);
-#OwnerOf func :-
-$obj2->getOwnerOf($contractAddress,$tokenId);
-var_dump($obj2);
-#TokenURI func:-
-$obj2->getTokenURI($contractAddress,$tokenId);
-var_dump($obj2);
-#TokenByIndex func :-
-$obj2->getTokenByIndex($contractAddress,$index);
-var_dump($obj2);
-#TokenOfOwnerByIndex func :-
-$obj2->getTokenOfOwnerByIndex($contractAddress,$ownerAddress,$index);
-var_dump($obj2);
-#GetApprove func:-
-$obj2->getApproved($contractAddress,$tokenId);
-var_dump($obj2);
-#Approve func:-
-$obj2->approve($contractAddress,$recieverAddress,$tokenId,$privateKey);
-var_dump($obj2);
-#SetApprovedForAll func :-
-$obj2->setApprovalForAll($contractAddress,$operatorAddress,$approvedStatus,$ownerPrivateKey,$tokenId);
-var_dump($obj2);
-#IsApprovedForAll func :-
-$obj2->isApprovedForAll($contractAddress,$ownerAddress,$operatorAddr
-var_dump($obj2);
-#SafeTransferFrom func:-
-$obj2->safeTransferFrom($contractAddress,$ownerAddress,$recieverAddress,$tokenId,$approvedPrivateKey);
-var_dump($obj2);
-#TransferFrom func:-
-$obj2->transferFrom($contractAddress,$ownerAddress,$recieverAddress,$tokenId,$approvedPrivateKey);
-var_dump($obj2);
+var_dump($obj2->getSymbol($contractAddress));
+
 #TransferOwnership
-$obj2->transfer($contractAddress,$ownerAddress,$recieverAddress,$tokenId,$approvedPrivateKey);
+var_dump($obj2->transfer($contractAddress,$ownerAddress,$recieverAddress,$tokenId,$approvedPrivateKey));
+
 ?>
 ```
