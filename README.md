@@ -1,30 +1,16 @@
 # XDC3PHP
-A PHP library that connects to interact with the xdc blockchain. It connects to an XDC node to send transactions, interact with smart contracts and much more!
 
-## What is an XRC20 token?
+XDC3_PHP API with support for smart contracts, XRC20 and XRC721.
 
-·An XRC20 token is a blockchain-based asset with similar functionality to ether, it can hold value and be sent and received.
-
-· XRC20 tokens are stored and sent using Xinfin addresses and transactions, and use gas to cover transaction fees.
-
-# XRC721 Token Standard
-
-## What is an XRC721 token?
-
-·The XRC-721 introduces a standard for NFT, in other words, this type of Token is unique and can have different value than another Token from the same Smart Contract, maybe due to its age, rarity or even something else like its visual. Wait, visual?
-
-Yes! All NFTs have a uint256 variable called tokenId, so for any XRC-721 Contract, the pair contract address, uint256 tokenId must be globally unique.
-
-Every XRC-721 compliant contract must implement the XRC721 and XRC165 interfaces.
-
+```
 ## XRC20 Token: Read methods                XRC721 Token: Read methods
 
-name()                                          name()
-symbol()                                        symbol()
-decimal()                                       totalSupply()
-totalSupply()                                   balanceOf(owner address)
-balanceOf(account)                              ownerOf(tokenId)
-allowance(owner, spender)                       tokenURI(tokenId)
+                name()                          name()
+                symbol()                        symbol()
+                decimal()                       totalSupply()
+                totalSupply()                   balanceOf(owner address)
+                balanceOf(account)              ownerOf(tokenId)
+                allowance(owner, spender)       tokenURI(tokenId)
                                                 tokenByIndex(index)
                                                 tokenOfOwnerByIndex(ownerAddress,index)
                                                 supportInterface(interfaceId)
@@ -33,18 +19,19 @@ allowance(owner, spender)                       tokenURI(tokenId)
 
 ## XRC20 Token: Write methods                           ##  XRC721 Token: Write methods
 
-approve(receiverAddress , amount)                           setApprovalForAll(operatorAddress, booleanValue)
-transfer(recipient, amount)                                 approve(receiverAddress , tokenId)
-transferFrom(sender, recipient, amount)                     transferFrom(recipient, amount)
-increaseAllowance(spender, addedValue)                      safeTransferFrom(spender, amount)
-decreaseAllowance(spender, subtractedValue)                
-                                                             
-##  Usage
+        approve(receiverAddress , amount)                 setApprovalForAll(operatorAddress, booleanValue)
+        transfer(recipient, amount)                       approve(receiverAddress , tokenId)
+        transferFrom(sender, recipient, amount)           transferFrom(recipient, amount)
+        increaseAllowance(spender, addedValue)            safeTransferFrom(spender, amount)
+        decreaseAllowance(spender, subtractedValue)                
 ```
-When the user wants to use the SDKPHP library he/ she need to follow the below steps
-Step1 :- create a folder User convient (eg : sdk)
-Step2 :- inside the folder open the command prompt and type composer require xdc3/php
-Step3 :- create a file according to  User convient (eg : index.php)
+                                                          
+#  Usage
+```
+User need to follow the following steps for using the XDCPHP Library
+Step1 :- Create a folder (eg : sdk)
+Step2 :- Inside the folder open the command prompt and type composer require xdc3/php
+Step3 :- Create a file (eg : index.php)
 Step4 :- After creating user need to add the path , import the classes and create the object
 Step5 :- (optional) If user wants to change the URL of (Apothem testnet Network)  Goto vendor -> XDC3 folder -> PHP folder -> .env file
 ```
@@ -69,7 +56,7 @@ ex: before it has ;extension=gmp just remove ";" to enable this Extension.
 
 
 
-3.after that enable this one(;curl.cainfo =) and add ssl certificatepath here.
+3.After that enable this one(;curl.cainfo =) and add ssl certificatepath here.
 
   for download this certificate
 
@@ -190,7 +177,6 @@ var_dump($obj2);
 #SupportsInterface func :-
 var_dump($obj2);
 $obj2->getSupportInterface($contractAddress,$interfaceId);
-var_dump($obj2);
 #OwnerOf func :-
 $obj2->getOwnerOf($contractAddress,$tokenId);
 var_dump($obj2);
