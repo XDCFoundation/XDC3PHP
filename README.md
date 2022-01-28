@@ -2,22 +2,23 @@
 
 XDC3_PHP SDK with support for smart contracts, XRC20 and XRC721.
 
+### This SDK supports the following read and write methods.
 ```
-    XRC20 Token: Read methods                           XRC721 Token: Read methods
-
-        name()                                               name()
-        symbol()                                             symbol()
-        decimal()                                            totalSupply()
-        totalSupply()                                        balanceOf(owner address)
-        balanceOf(account)                                   ownerOf(tokenId)
-        allowance(owner, spender)                            tokenURI(tokenId)
-                                                             tokenByIndex(index)
-                                                             tokenOfOwnerByIndex(ownerAddress,index)
-                                                             supportInterface(interfaceId)
-                                                             getApproved(tokenId)
-                                                             isApprovedForAll(ownerAddress, operatorAddress) 
-
-    XRC20 Token: Write methods                           XRC721 Token: Write methods
+  |--XRC20 Token: Read methods---------------------------XRC721 Token: Read methods---------------------------|
+  |------------------------------------------------|----------------------------------------------------------|
+  |     name()                                     |          name()                                          |
+  |     symbol()                                   |          symbol()                                        |
+  |     decimal()                                  |          totalSupply()                                   |
+  |     totalSupply()                              |          balanceOf(owner address)                        |
+  |     balanceOf(account)                         |          ownerOf(tokenId)                                |
+  |     allowance(owner, spender)                  |          tokenURI(tokenId)                               |
+  |                                                |          tokenByIndex(index)                             |
+  |                                                |          tokenOfOwnerByIndex(ownerAddress,index)         |
+  |                                                |          supportInterface(interfaceId)                   |
+  |                                                |          getApproved(tokenId)                            |
+  |                                                |          isApprovedForAll(ownerAddress, operatorAddress) | 
+  |------------------------------------------------|----------------------------------------------------------|
+    XRC20 Token: Write methods                     |      XRC721 Token: Write methods
 
         approve(receiverAddress , amount)                    setApprovalForAll(operatorAddress, booleanValue)
         transfer(recipient, amount)                          approve(receiverAddress , tokenId)    
@@ -29,12 +30,12 @@ XDC3_PHP SDK with support for smart contracts, XRC20 and XRC721.
                                                           
 ##  Usage
 ```
-User need to follow the following steps for using the XDCPHP Library
-Step1 :- Create a folder (eg : sdk)
-Step2 :- Inside the folder open the command prompt and type 'composer require xdc3/php'
-Step3 :- Create a file (eg : index.php)
-Step4 :- After creating user need to add the path , import the classes and create the object
-Step5 :- (optional) If user wants to change the URL of (Apothem testnet Network)  Goto vendor -> XDC3 folder -> PHP folder -> .env file
+User need to follow the following steps for using the XDCPHP Library.
+Step1 :- Create a folder (eg : sdk).
+Step2 :- Inside the folder open the command prompt and type 'composer require xdc3/php'.
+Step3 :- Create a file (eg : index.php).
+Step4 :- After creating user need to add the path, import the classes and create the object.
+Step5 :- (optional) If user wants to change the URL of (Apothem testnet Network)  goto vendor -> XDC3 folder -> PHP folder -> .env file and make changes there.
 ```
 
 ## Installation
@@ -49,21 +50,21 @@ Before Installing This Library
 
 
 
-2.go to PHP Folder in the system, open php.ini file Then enable gmp and curl extensions.
+2.Go to PHP Folder in the system, open php.ini file then enable gmp and curl extensions.
 
-ex: before it has ;extension=gmp just remove ";" to enable this Extension.
+ex: Before it has ';extension=gmp' just remove ";" to enable this Extension.
 
-    before it has ;extension=curl just remove ";" to enable this Extension.
+    Before it has ';extension=curl' just remove ";" to enable this Extension.
 
 
 
-3.After that enable this one(;curl.cainfo =) and add ssl certificatepath here.
+3.After that enable this one '(;curl.cainfo =)' and add ssl certificate path here.
 
-  for download this certificate
+  For download this certificate
 
   go to this url https://curl.se/docs/caextract.html then click on cacert.pem on the top.
 
-  then copy the path of the certificate and paste in php .ini file.
+  Copy the path of the certificate and paste in php .ini file.
 
   ex: curl.cainfo = "C:\Users\HP\Downloads\cacert.pem"
 
@@ -74,36 +75,10 @@ ex: before it has ;extension=gmp just remove ";" to enable this Extension.
   Run below command in admin powershell to install openssl.
 
   ex: choco install openssl
-  
-  
- 5. -In XDC library inside the vendor folder -> xdc3base -> php  we can find the all called functions of the XRC20 methods . (including  contract file , address calling from apothem file etc)
-
-    In PHPS library inside the vendor folder -> xdc3 -> php  we can find the all calling functions from the XDC libarary. (ex : in modules xrc20 folder contains every calling methods )
-    
+      
 ```
 
-## Folder Info 
--In XDC library inside the vendor folder -> xdc3base -> php  we can find the all called functions of the XRC20 methods . (including  contract file , address calling from apothem file etc)
-
-In PHPS library inside the vendor folder -> xdc3 -> php  we can find the all calling functions from the XDC libarary. (ex : in modules xrc20 folder contains every calling methods )
-
-If user wants to change the URL  Goto vendor -> XDC3 folder -> PHP folder -> .env file   .
-
-ex :-//path configuration
-include "vendor/xdc3/php/library.php";
-
-//Import classes of XRC20 and XRC721
-use XRC721\SDK\XRC20SDK;
-use XRC721\SDK\XRC721;
-
-//Creating a Objects to call the functions of XRC20 and XRC721 
-$obj1 = new XRC20SDK();
-$obj2-> new XRC721();
-
-//Create a wallet for the User
-$obj3 = new createXDCWallet();
-
-## Example
+## Example for XRC20
 ```php
 Test.php
 <?php
@@ -117,21 +92,20 @@ use XRC20\SDK\XRC20SDK;
 //Creating a Objects to call the functions of XRC20 and Create a wallet for the User
 $obj1 = new XRC20SDK();
 
-Name func :-
+//Name func :-
 var_dump($obj1->getName($contractAddress));
 
-GetApprove func:-
+//GetApprove func:-
 var_dump($obj1->getApprove($contractAddress,$ownerAddress,$ownerPrivateKey,$spenderAddress,$tokenAmount));
 
-TransferFrom func :-
+//TransferFrom func :-
 var_dump($obj1->transferFrom($contractAddress,$ownerAddress,$spenderAddress,$spenderPrivateKey,$recieverAddress,$tokenAmount));
 
-TransferXdc func :-
+//TransferXdc func :-
 $obj1->transferXdc($contractAddress,$senderAddress,$senderPrivateKey,$recieverAddress,$xdcAmount);
 var_dump($obj1);
 
-CreateWallet func:-
-
+//CreateWallet func:-
 $obj3 = new createXDCWallet();
 $obj3->createWallet();
 ```
@@ -141,7 +115,7 @@ Text.php
 ```php 
 <?php
 
-ex :-//path configuration
+//ex :-//path configuration
 include "vendor/xdc3/php/library.php";
 
 //Import classes of XDC721
@@ -150,13 +124,13 @@ use XRC721\SDK\XRC721;
 //Create a Object
 $obj2-> new XRC721();
 
-#Name func :-
+//Name func :-
 var_dump($obj2->getName($contractAddress));
 
-#Symbol func :-
+//Symbol func :-
 var_dump($obj2->getSymbol($contractAddress));
 
-#TransferOwnership
+//TransferOwnership
 var_dump($obj2->transfer($contractAddress,$ownerAddress,$recieverAddress,$tokenId,$approvedPrivateKey));
 
 ?>
