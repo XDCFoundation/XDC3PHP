@@ -4,30 +4,30 @@ XDC3_PHP SDK with support for smart contracts, XRC20 and XRC721.
 
 ### This SDK supports the following read and write methods.
 
-  |    XRC20 Token: Read methods                     |         XRC721 Token: Read methods                       |
+  |    XRC20 Token: Read methods                     |         XRC20 Token: Write methods                       |
   |             ---                                  |                        ---                               | 
-  |     name()                                       |          name()                                          |
-  |     symbol()                                     |          symbol()                                        |
-  |     decimal()                                    |          totalSupply()                                   |
-  |     totalSupply()                                |          balanceOf(owner address)                        |
-  |     balanceOf(account)                           |          ownerOf(tokenId)                                |
-  |     allowance(owner, spender)                    |          tokenURI(tokenId)                               |
-  |                                                  |          tokenByIndex(index)                             |
-  |                                                  |          tokenOfOwnerByIndex(ownerAddress,index)         |
-  |                                                  |          supportInterface(interfaceId)                   |
-  |                                                  |          getApproved(tokenId)                            |
-  |                                                  |          isApprovedForAll(ownerAddress, operatorAddress) | 
+  |     name()                                       |       approve(receiverAddress , amount)                  |
+  |     symbol()                                     |       transfer(recipient, amount)                        |
+  |     decimal()                                    |       transferFrom(sender, recipient, amount)            |
+  |     totalSupply()                                |       increaseAllowance(spender, addedValue)             |
+  |     balanceOf(account)                           |       decreaseAllowance(spender, subtractedValue)        |
+  |     allowance(owner, spender)                    |                                                          |
+                                                                                
                                             
-                                            
-                                            
-  |    XRC20 Token: Write methods                    |          XRC721 Token: Write methods                     |
-  |            ---                                   |                       ---                                |
-  |      approve(receiverAddress , amount)           |          setApprovalForAll(operatorAddress, booleanValue)|
-  |      transfer(recipient, amount)                 |          approve(receiverAddress , tokenId)              |
-  |      transferFrom(sender, recipient, amount)     |          transferFrom(recipient, amount)                 | 
-  |      increaseAllowance(spender, addedValue)      |          safeTransferFrom(spender, amount)               |
-  |      decreaseAllowance(spender, subtractedValue) |                                                          |  
-  |                                                  |                                                          |
+  |    XRC721 Token: Write methods                          |     XRC721 Token: Write methods                     |
+  |            ----                                         |     ----                                            |
+  |       name()                                            |    setApprovalForAll(operatorAddress, booleanValue  |
+  |        symbol()                                         |     approve(receiverAddress , tokenId)              |
+  |        totalSupply()                                    |     transferFrom(recipient, tokenId)                |
+  |        balanceOf(owner address)                         |     safeTransferFrom(spender, tokenId)              |
+  |        ownerOf(tokenId)                                 |                                                     |
+  |        tokenURI(tokenId)                                |                                                     |
+  |        tokenByIndex(index)                              |                                                     |
+  |        tokenOfOwnerByIndex(ownerAddress,index)          |                                                     |
+  |        supportInterface(interfaceId)                    |                                                     |
+  |        getApproved(tokenId)                             |                                                     |
+  |        isApprovedForAll(ownerAddress, operatorAddress)  |                                                     |
+             
 
                                                           
 ##  Usage
