@@ -4,8 +4,8 @@ XDC3_PHP SDK with support for smart contracts, XRC20 and XRC721.
 
 ### This SDK supports the following read and write methods.
 ```
-  |--XRC20 Token: Read methods---------------------------XRC721 Token: Read methods---------------------------|
-  |------------------------------------------------|----------------------------------------------------------|
+  |    XRC20 Token: Read methods                             XRC721 Token: Read methods                       |
+  |             ---                                                         ---                               | 
   |     name()                                     |          name()                                          |
   |     symbol()                                   |          symbol()                                        |
   |     decimal()                                  |          totalSupply()                                   |
@@ -17,7 +17,7 @@ XDC3_PHP SDK with support for smart contracts, XRC20 and XRC721.
   |                                                |          supportInterface(interfaceId)                   |
   |                                                |          getApproved(tokenId)                            |
   |                                                |          isApprovedForAll(ownerAddress, operatorAddress) | 
-  |------------------------------------------------|----------------------------------------------------------|
+  |                                                                                                           |
     XRC20 Token: Write methods                     |      XRC721 Token: Write methods
 
         approve(receiverAddress , amount)                    setApprovalForAll(operatorAddress, booleanValue)
